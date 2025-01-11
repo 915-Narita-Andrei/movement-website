@@ -101,7 +101,8 @@ p {
 
 .tile-description p {
     font-size: 1rem;
-    color: #7f8c8d;
+    color: #636060;
+    font-weight: bold;
     line-height: 1.4;
 }
 
@@ -137,8 +138,10 @@ p {
 
 .definition-box p {
     font-size: 1rem;
-    color: #7f8c8d;
+    font-weight: bold;
+    color: #636060;
 }
+
 
 /* Media Queries */
 @media (max-width: 768px) {
