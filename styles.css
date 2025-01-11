@@ -1,0 +1,275 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Full-height Sections */
+.section {
+    padding: 60px 20px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #4c6a92;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.section:nth-child(even) {
+    background: linear-gradient(to bottom right, #4c6a92, #1f3550);
+}
+
+.section:nth-child(odd) {
+    background: linear-gradient(to bottom right, #1f3550, #4c6a92);
+}
+
+.section:hover {
+    background: linear-gradient(to bottom right, #365e7f, #223f57); /* Subtle hover effect */
+}
+
+.text-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #f4f4f4;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Tiles */
+.tiles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.tile {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    background-color: #f7f7f7;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tile-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.tile-description {
+    padding: 20px;
+    text-align: center;
+}
+
+.tile-description h3 {
+    font-size: 1.5rem;
+    color: #4c6a92;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.tile-description p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    line-height: 1.4;
+}
+
+/* Definition Boxes */
+.definition-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.definition-box {
+    background-color: white;
+    color: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.definition-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.definition-box strong {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.definition-box p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .tiles-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tile-description h3 {
+        font-size: 1.3rem;
+    }
+
+    .definition-boxes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .tiles-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Section 3: Vertical Layout for History */
+.history-container {
+    display: flex; /* Enables Flexbox for layout control */
+    flex-direction: row; /* Stacks items vertically */
+    align-items: center; /* Centers the text and image horizontally */
+    gap: 20px; /* Adds space between the text and the image */
+    text-align: center; /* Centers text content */
+}
+
+.history-container .text-content {
+    max-width: 800px; /* Limits the width of the text for readability */
+    margin: 0 auto; /* Centers the text content */
+}
+
+.history-container .section-image {
+    max-width: 50%; /* Ensures the image scales properly */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Adds rounded corners to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+/* Optional: Adjust padding for vertical spacing in the section */
+#section3 {
+    padding: 40px 20px;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .history-container {
+        text-align: left; /* Align text to the left for small screens */
+        gap: 15px; /* Adjust spacing for smaller screens */
+        flex-direction: column;
+    }
+}
+
+
+/* Header Styles */
+header {
+    position: fixed; /* Sticks the header at the top of the page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4c6a92; /* Matches the theme */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    z-index: 1000; /* Ensures the header is above other content */
+}
+
+.menu {
+    display: flex;
+    justify-content: center; /* Centers the menu */
+    align-items: center;
+    padding: 10px 20px; /* Adds padding for a better look */
+}
+
+.menu ul {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Arranges items horizontally */
+    gap: 20px; /* Adds space between menu items */
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Makes text white for contrast */
+    font-size: 1rem; /* Sets font size */
+    font-weight: bold; /* Makes text bold */
+    padding: 8px 15px; /* Adds padding around each link */
+    border-radius: 5px; /* Rounds the edges of buttons */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.menu a:hover {
+    background-color: #2e4a66; /* Changes background color on hover */
+}
+
+/* Offset content to avoid being covered by the fixed header */
+body {
+    padding-top: 60px; /* Adjust this based on header height */
+}
+
+/* Responsive Menu for Smaller Screens */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column; /* Stacks menu items vertically */
+        gap: 10px; /* Adjusts space between items */
+    }
+
+    .menu a {
+        font-size: 0.9rem; /* Adjusts font size for smaller screens */
+    }
+}
