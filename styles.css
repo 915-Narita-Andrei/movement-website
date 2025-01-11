@@ -273,3 +273,11 @@ body {
         font-size: 0.9rem; /* Adjusts font size for smaller screens */
     }
 }
+
+h2 {
+    font-size: 2.5rem; /* Adjusted to maintain a prominent heading */
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px; /* Slight spacing for a modern look */
+}
