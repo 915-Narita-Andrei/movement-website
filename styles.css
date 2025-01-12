@@ -217,7 +217,7 @@ p {
 
 
 /* Header Styles */
-header {
+.header {
     position: fixed; /* Sticks the header at the top of the page */
     top: 0;
     left: 0;
@@ -274,6 +274,15 @@ body {
 
     .menu a {
         font-size: 0.9rem; /* Adjusts font size for smaller screens */
+    }
+
+    .header {
+        position:inherit;
+        margin-bottom: 30px;
+    }
+
+    body {
+        padding-top: 0;
     }
 }
 
